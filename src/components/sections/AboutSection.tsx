@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutSection() {
@@ -56,14 +57,16 @@ export default function AboutSection() {
             </div>
           </div>
           <p className="text-sm text-cyan-200 italic">
-            Why cybersecurity matters: In today's connected world, everyone is a
+            Why cybersecurity matters: In today&apos;s connected world, everyone is a
             target. We help you defend your data and privacy.
           </p>
         </div>
         <div className="flex-1 flex justify-center items-center z-10">
-          <img
+          <Image
             src="/about-cyber.svg"
             alt="Cybersecurity Team"
+            width={224}
+            height={224}
             className="w-56 h-56 object-contain rounded-lg border-2 border-cyan-700 shadow-lg bg-[#0a1833]"
           />
         </div>

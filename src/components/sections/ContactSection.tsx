@@ -347,7 +347,6 @@ interface SubmitButtonProps {
 
 const SubmitButton: React.FC<SubmitButtonProps> = ({
   isSubmitting,
-  isSubmitted,
   submitStatus,
   disabled,
 }) => {
@@ -418,7 +417,7 @@ const StatusMessage: React.FC<StatusMessageProps> = ({ status, message }) => {
           <span className="font-semibold">Message sent successfully!</span>
         </div>
         <p className="text-emerald-300 text-sm mt-1">
-          We'll get back to you within 24 hours.
+          We&apos;ll get back to you within 24 hours.
         </p>
       </div>
     );
@@ -684,7 +683,7 @@ export default function ContactSection() {
       } else {
         throw new Error("Failed to send message");
       }
-    } catch (error) {
+    } catch {
       setFormState((prev) => ({
         ...prev,
         isSubmitting: false,
